@@ -21,9 +21,12 @@ const createRequest = (input, callback) => {
             });
         })
         .then(function(response){
+            jsonData = {};
+            jsonData['goldspot'] = response.data.dataset.data[0][1];
+
             callback(200, {
                 jobRunID: input.id,
-                data: response.data.dataset.data[0][1],
+                data: jsonData,
                 statusCode: 200
             });
         });
