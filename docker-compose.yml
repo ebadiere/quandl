@@ -4,7 +4,7 @@ services:
   chainlink:
     image: "smartcontract/chainlink"
     ports:
-      - "6688:6688"
+      - "6689:6689"
     volumes:
       - /Users/ericbadiere/.chainlink-ropsten:/chainlink
     env_file:
